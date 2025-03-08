@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+class home extends StatelessWidget {
+  const home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenheight = MediaQuery.of(context).size.height; // to manage height and width through this media query
+    return Scaffold(
+      appBar: AppBar(
+        leading: Padding(padding: EdgeInsets.all(5), //
+          child:Image.asset('images/bgnu-logo.png'), // for image use
+        ),
+        title: const Column(
+          children: [
+            Text('BGNU',style: TextStyle(fontWeight: FontWeight.bold),),
+            Text('Baba Guru Nanak University',style: TextStyle(fontSize: 20),),
+          ],
+        ),
+        backgroundColor: Colors.white,
+        centerTitle: true, // text ko center ma lana ka lia
+      ),
+      body: Column(
+        children: [
+          Container(
+            width: screenWidth*1.0,
+            padding: EdgeInsets.symmetric(horizontal: 23),
+            child: Column(
+
+              children: [
+
+                SizedBox(height: 25,),
+                Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text('ABOUT',style: TextStyle(color: Colors.blue,),)),
+                SizedBox(height: 15,),
+                Text('Add business hoursProducts and Services · gnu.edu.pkBaba Guru Nanak Universityhttps://www.bgnu.edu.pkBaba Guru Nanak UniversityBaba Guru Nanak University (BGNU) is a Public sector university located in District Nankana Sahib, in the Punjab region of Pakistan.About BGNULife at BGNUBGNUSustainability at BGNUCareersKey Functions of ORIC-BGNUNCM-2025AboutBaba Guru Nanak University is a public university located in Nankana Sahib, Punjab, Pakistan, the birthplace of Guru Nanak. On 28 October 2019, Prime Minister of Pakistan, Imran Khan laid the foundation stone of the university',textAlign: TextAlign.justify,),
+              ],
+            ),
+
+
+          ),
+          Column(
+            children: [
+              SizedBox(height: 12,),
+
+              Container(
+
+                padding: EdgeInsets.symmetric(horizontal: 23),
+                child: Row(
+                  children: [
+                    SizedBox(height: 12,),
+                    Align(
+                      //alignment: Alignment.Ri,
+                        child: Image.asset("images/bgnu2.jpeg",width: screenWidth*0.88))
+                  ],
+                ),
+              )
+            ],
+          ),
+          SizedBox(height: 12,),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 23),
+            child: Text('(BGNU) is a Public sector university located in District Nankana Sahib, in the Punjab region of Pakistan.About BGNULife at BGNUBGNUSustainability at BGNUCareersKey Functions'),
+          ),
+
+          SizedBox(height: 12,),
+          Container(
+
+            color:Colors.indigo,
+            height: 30,
+            width: screenWidth,
+            child: Text('bgnu@gmail.com`',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,),
+          ),
+        ],
+      ),
+
+
+    );
+  }
+}
